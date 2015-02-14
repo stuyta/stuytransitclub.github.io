@@ -5,6 +5,7 @@ h1{
 }
 div{
     background-color:chartreuse;
+	font-size: 25px;
 }
 div h2{
     font-size: 36;

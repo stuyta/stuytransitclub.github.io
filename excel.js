@@ -4,6 +4,6 @@ function excel(){
 	   window.open("excel.html")
    }
    else{
-	   alert("WRONG!/nThis is not the right password!")
+	   alert("WRONG!\nThis is not the right password!")
    }
 }

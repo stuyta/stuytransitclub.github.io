@@ -39,16 +39,21 @@ div div div{
 			}
 			#home{
 			     display: inline;
+				 padding-left: 0px;
 			}
 			#about{
 			     display: inline;
+				 padding-left: 20px;
 			}
 			#gallery{
 			     display: inline;
+				 padding-left: 20px;
 			}
 			#thanks{
 			     display: inline;
+				 padding-left: 20px;
 			}
 			#youtube{
 			    display: inline;
+				padding-left: 20px;
 			}

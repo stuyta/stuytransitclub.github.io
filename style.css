@@ -58,7 +58,7 @@ div div div{
 				padding-left: 20px;
 			}
 			#excel{
-			    width: 30em;
+			    width: 20em;
 				height: 3em;
 				background-color: #FF00FF;
 			}
@@ -67,4 +67,15 @@ div div div{
 			}
 			#excel:active{
 			    background-color: #00FFFF;
+			}
+			#game{
+			    width: 20em;
+				height: 3em;
+				background-color: orange;
+			}
+			#game:hover{
+			    background-color: #FFFFFF;
+			}
+			#game:active{
+			   background-color: #000000;
 			}

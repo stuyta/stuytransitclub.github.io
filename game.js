@@ -43,7 +43,7 @@ function game(){
 			alert("Oops, try again!\nYou got 0/5.");
 		}
 	}
-	/*Add else if games here*/
+	/*Replace it with an else if statement*/
 	else{
 		alert("WELCOME " + name + ",\nTo the second edition of\nThe Transit Trivia Game!\n\nThe questions themselves can be significantly harder than the first game, so watch your back!")
 		var pa = prompt("What country assembles the R160 parts and ships them to the United States?\nHint: The factories in this country are owned by Alstom.")
@@ -88,4 +88,5 @@ function game(){
 			alert("Told you these questions are hard!\nYou got 0/5.")
 		}
 	}
+	/*Put an else if or else statement*/
 }

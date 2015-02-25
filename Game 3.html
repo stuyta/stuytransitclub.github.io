@@ -1,0 +1,176 @@
+<html>
+	<head>
+		<title>Game 3</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			<html>
+	<head>
+		<title>Game 3</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#green").mouseenter(function(){
+                    $("#green").fadeOut("fast");
+                    $("body").append("<p id='exit' style='font-size: 40px; color: white;'>You lost!</p>");
+                })
+			})
+            $(document).ready(function(){
+                $("#green").click(function(){
+                    $("#exit").remove();
+                    $("body").append("<input type='submit' style='font-size: 40px;' value='Click this.' id='ask'/>");
+                    $("#ask").click(function(){
+                        $("body").append("<p style='font-size: 40px; color: white;' id='yelb'> What was the Yellow B service?</p>");
+                        $("body").append("<p><input type='submit' style='font-size: 40px;' value='A: N.' id='a'/></p>");
+                        $("body").append("<p><input type='submit' style='font-size: 40px;' value='B: <Q>.' id='b'/></p>");
+                        $("body").append("<p><input type='submit' style='font-size: 40px;' value='C: W.' id='c'/></p>");
+                        $("#a").click(function(){
+                            $("#ask").remove()
+                            $("#yelb").fadeOut("slow");
+                            $("#a").fadeOut("slow");
+                            $("#b").fadeOut("slow");
+                            $("#c").fadeOut("slow");
+                            $("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
+                        })
+                        $("#b").click(function(){
+                            $("#ask").remove()
+                            $("#yelb").fadeOut("slow");
+                            $("#a").fadeOut("slow");
+                            $("#b").fadeOut("slow");
+                            $("#c").fadeOut("slow");
+                            $("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
+                        })
+                        $("#c").click(function(){
+                            $("#ask").remove()
+                            $("#yelb").fadeOut("slow");
+                            $("#a").fadeOut("slow");
+                            $("#b").fadeOut("slow");
+                            $("#c").fadeOut("slow");
+                            $("body").append("<p style='font-size: 40px; color: white;'>Great job! You won so far, but wait for the harder stuff!</p>");
+                            $("body").append("<p><img src='http://images.nycsubway.org/icon/title_ny_4thave.jpg' id='imgtwo'/></p>")
+                            $("#imgtwo").mouseenter(function(){
+                                $("#imgtwo").fadeOut("slow");
+                                $("body").append("<p style='font-size: 40px; color: white;' id='exittwo'>You lost!</p>");
+                            })
+                            $("#imgtwo").click(function(){
+                                $("body").append("<p style='font-size: 40px; color: white;'>Good job with the mouse skills, though!</p>")
+                                $("#exittwo").remove();
+								$("body").append("<p style='font-size: 40px; color: white;'>Last Question: In 2005, name the model and route of the car with #5555.</p>")
+                                $("body").append("<p style='font-size: 40px; color: white;'>Okay, try <b>THIS</b> on for size!</p>");
+								$("body").append("<p><input type='submit' style='font-size: 20px;' value='A: R46, L' id='atwo'/></p>");
+                                $("body").append("<p><input type='submit' style='font-size: 20px;' value='B: R44, A.' id='btwo'/></p>");
+                                $("body").append("<p><input type='submit' style='font-size: 20px;' value='C: R40M, E' id='ctwo'/></p>");
+								$("body").append("<p><input type='submit' style='font-size: 20px;' value='D: R46, E' id='dtwo'/></p>");
+								$("body").append("<p><input type='submit' style='font-size: 20px;' value='E: R48, C' id='etwo'/></p>");
+								$("body").append("<p><input type='submit' style='font-size: 20px;' value='F: R42, J' id='ftwo'/></p>");
+								$("body").append("<p><input type='submit' style='font-size: 20px;' value='G: R68, B' id='gtwo'/></p>");
+								$("body").append("<p><input type='submit' style='font-size: 20px;' value='H: R68, E' id='htwo'/></p>");
+								$("#atwo").click(function(){
+								    $("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
+									$("#atwo").remove();
+									$("#btwo").remove();
+									$("#ctwo").remove();
+									$("#dtwo").remove();
+									$("#etwo").remove();
+									$("#ftwo").remove();
+									$("#gtwo").remove();
+									$("#htwo").remove();
+								})
+								$("#btwo").click(function(){
+								    $("#atwo").remove();
+									$("#btwo").remove();
+									$("#ctwo").remove();
+									$("#dtwo").remove();
+									$("#etwo").remove();
+									$("#ftwo").remove();
+									$("#gtwo").remove();
+									$("#htwo").remove();
+									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
+								})
+								$("#ctwo").click(function(){
+								    $("#atwo").remove();
+									$("#btwo").remove();
+									$("#ctwo").remove();
+									$("#dtwo").remove();
+									$("#etwo").remove();
+									$("#ftwo").remove();
+									$("#gtwo").remove();
+									$("#htwo").remove();
+									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
+								})
+								$("#dtwo").click(function(){
+								    $("#atwo").remove();
+									$("#btwo").remove();
+									$("#ctwo").remove();
+									$("#dtwo").remove();
+									$("#etwo").remove();
+									$("#ftwo").remove();
+									$("#gtwo").remove();
+									$("#htwo").remove();
+									$("body").append("<p style='font-size: 40px; background-color: chartreuse;'>OMG! YOU WON THE GAME!!!</p>");
+								})
+								$("#etwo").click(function(){
+								    $("#atwo").remove();
+									$("#btwo").remove();
+									$("#ctwo").remove();
+									$("#dtwo").remove();
+									$("#etwo").remove();
+									$("#ftwo").remove();
+									$("#gtwo").remove();
+									$("#htwo").remove();
+									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
+								})
+								$("#ftwo").click(function(){
+								    $("#atwo").remove();
+									$("#btwo").remove();
+									$("#ctwo").remove();
+									$("#dtwo").remove();
+									$("#etwo").remove();
+									$("#ftwo").remove();
+									$("#gtwo").remove();
+									$("#htwo").remove();
+									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
+								})
+								$("#gtwo").click(function(){
+								    $("#atwo").remove();
+									$("#btwo").remove();
+									$("#ctwo").remove();
+									$("#dtwo").remove();
+									$("#etwo").remove();
+									$("#ftwo").remove();
+									$("#gtwo").remove();
+									$("#htwo").remove();
+									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
+								})
+								$("#htwo").click(function(){
+								    $("#atwo").remove();
+									$("#btwo").remove();
+									$("#ctwo").remove();
+									$("#dtwo").remove();
+									$("#etwo").remove();
+									$("#ftwo").remove();
+									$("#gtwo").remove();
+									$("#htwo").remove();
+									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
+								})
+                            })
+                        })
+                    })
+                })
+            })
+        </script>
+		<script>
+		    /*THIS CODE IS NOT JQUERY, THIS IS JAVASCRIPT!!!*/
+			function exitbeginning(){
+			    window.close();
+			}
+		</script>
+	</head>
+    <body style="background-color: indigo">
+        <p style="font-size: 40px; color: white;">Click the image. ;-)</p>
+        <p><img id="green"src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/R62A_1_train_at_Dyckman.jpg/250px-R62A_1_train_at_Dyckman.jpg" /></p>
+		</p><input type="submit" value="Exit and close the window" onclick="exitbeginning()" style='font-size: 20px;' id="exitbeginningtwo" /></p>
+    </body>
+</html>
+		</script>
+	</head>
+</html>

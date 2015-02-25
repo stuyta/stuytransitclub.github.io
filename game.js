@@ -1,8 +1,8 @@
 function game(){
-	var choose = prompt("Which game would you like to play?\nA: Transit Trivia Game 1\nB: Transit Trivia Game 2")
-	var name = prompt("What is your name?")
+	var choose = prompt("Which game would you like to play?\nA: Transit Trivia Game 1\nB: Transit Trivia Game 2\nC: Game 3")
 	if(choose ==  "A"){
 		//Make a transit trivia game.
+		var name = prompt("What is your name?")
 		alert("WELCOME\nTo the 1st Edition of\nThe Transit Trivia Game!");
 		var pa = prompt("Let us start playing:\nClick 'Cancel' to stop.\nWhat was the company that built the R160A?");
 		if(pa == "Alstom"){
@@ -43,6 +43,7 @@ function game(){
 	}
 	/*Replace it with an else if statement*/
 	else if(choose == "B"){
+		var name = prompt("What is your name?")
 		alert("WELCOME " + name + ",\nTo the second edition of\nThe Transit Trivia Game!\n\nThe questions themselves can be significantly harder than the first game, so watch your back!")
 		var pa = prompt("What country assembles the R160 parts and ships them to the United States?\nHint: The factories in this country are owned by Alstom.")
 		if(pa == "Brazil"){
@@ -87,6 +88,9 @@ function game(){
 		}
 	}
 	/*Put an else if or else statement*/
+	else if(choose == "C"){
+		window.open("Game 3.html")
+	}
 	else{
 		alert("Put your choice in capital letters. Try again.")
 	}

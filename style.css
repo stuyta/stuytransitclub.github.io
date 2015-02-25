@@ -3,6 +3,24 @@ h1{
     font-size: 48px;
     background-color: red;
 }
+#notext{
+    text-decoration: none;
+	font-size: 48px;
+	font-family: Times;
+	color: black;
+	background-color: transparent;
+	border: none;
+}
+#notext:hover{
+    color: white;
+}
+#notext:active{
+    color: #CC00CC;
+}
+#nobox{
+    background-color: transparent;
+	border: none;
+}
 div{
     background-color:chartreuse;
 	font-size: 25px;
@@ -14,6 +32,15 @@ div h2{
 a{
     font-size: 36px;
     color: #0007f4;
+	border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+	text-decoration: none;
+    background-color: #EEEEEE;
+}
+a:hover{
+   color: #FFFF00;
 }
 div div{
     background-color: #1cc8ff;

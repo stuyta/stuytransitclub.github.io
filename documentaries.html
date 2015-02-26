@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-	    <title>Excel Sheet</title>
-		<link type="text.css" rel="stylesheet" href="style.css"/>
+	    <title>Documentaries</title>
+	    <link type="text.css" rel="stylesheet" href="style.css"/>
+		<script src="excel.js"></script>
+		<script src="game.js"></script>
 	</head>
 	<body background="http://s3.amazonaws.com/hs-static/transit_maps/578559504_2720e628b2ccad9528b983bacf4ea27f.gif"; class='wsite-theme-light'>
-	    <script type="text/javascript">
-		    var paswd = prompt("What is the password?")
-			if(paswd != "r40slant"){
-			    window.close();
-			}
-		</script>
 	    <h1><a href="index.html" id="notext">Stuyvesant Transit Club</a></h1>
 		<div>
 		    <ul>
@@ -20,10 +16,14 @@
 				<li id="thanks"><a href="thanks.html">Acknowledgements</a></li>
 				<li id="youtube"><a href="youtube.html">Greg Huang's YouTube Channel</a></li>
 				<li id="documentaries"><a href="documentaries.html">Documentaries</a></li>
+				<input id="excel" type="submit" value="Excel Sheet" onclick="excel()"/>
+				<input id="game" type="submit" value="Play a game" onclick="game()"/>
 			</ul>
 		</div>
 		<div>
-		    <iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=A4F8F2588AFBD542%2130301&authkey=AGOBg2feGJ46X1c&em=2" width="100%" height="750px" frameborder="0" scrolling="no"></iframe>
+		    <h2>Here you can see documentaries about the NYC Subway.</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/J_zARKdiKKI" frameborder="0" allowfullscreen></iframe>
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/ElFuFK44AP8" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</body>
 </html>

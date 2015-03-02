@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Game 4</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+		    /*This function only moves the blue div element.*/
+            $(document).ready(function(){
+			     $("html").keydown(function(e){
+					 $("#divone").css("position", "absolute");
+					 console.log(e.keyCode); /*This allows me to see which ASCII number I get when a button is pressed.*/
+					 switch(e.which){
+					     /*Left and right arrow keys*/
+						 case 37:
+						     $("#divone").stop().animate({
+					             left: '-=250px'
+					         });
+							 break;
+					     /*I reversed the plus and minus because I want it to go LEFT when the LEFT button is clicked*/
+						 case 39:
+						     $("#divone").stop().animate({
+					             left: '+=250px'
+					         });
+							 break;
+					     /*Up and down arrow keys keys*/
+					     case 38:
+						     $("#divone").stop().animate({
+					             top: '-=250px'
+					         });
+							 break;
+					     /*I reversed the plus and minus because I want it to go UP when the UP button is clicked*/
+						 case 40:
+						     $("#divone").stop().animate({
+					             top: '+=250px'
+					         });
+							 break;
+                         case 65:
+						     $("#divone").stop().animate({
+					             left: '-=250px'
+					         });
+							 break;
+                         case 68:
+						     $("#divone").stop().animate({
+					             left: '+=250px'
+					         });
+							 break;
+                         case 87:
+						     $("#divone").stop().animate({
+					             top: '-=250px'
+					         });
+							 break;
+                         case 83:
+						     $("#divone").stop().animate({
+					             top: '+=250px'
+					         });
+							 break;
+                         case 27: /*This is the ESCAPE button.*/
+						     window.close();
+							 break;
+					 }
+				 });
+			});
+                function collision($divone, $divtwo) {
+                      var x1 = $divone.offset().left;
+                      var y1 = $divone.offset().top;
+                      var h1 = $divone.outerHeight(true);
+                      var w1 = $divone.outerWidth(true);
+                      var b1 = y1 + h1;
+                      var r1 = x1 + w1;
+                      var x2 = $divtwo.offset().left;
+                      var y2 = $divtwo.offset().top;
+                      var h2 = $divtwo.outerHeight(true);
+                      var w2 = $divtwo.outerWidth(true);
+                      var b2 = y2 + h2;
+                      var r2 = x2 + w2;
+        
+                      if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
+                      document.write("<p style='font-size: 48px;'>You got 1/4 of the game complete.</p>");
+                      var a = prompt("How many people died in the Malbone Street Wreck?");
+                      if(a == "93"){
+                         $("body").css("background-color", "#33CC33");
+                         document.writeln("<p style='font-size: 48px;'>You got 2/4.</p>");
+                         var b = prompt("What company made the traction motor for the 6024 rolling stock model?\nTHIS IS NOT A NYC CAR NUMBER!!!");
+                         if(b == "Alstom"){
+                             $("body").css("background-color", "#33CC33");
+                             document.writeln("<p style='font-size: 48px;'>You got 3/4.</p>");
+                             var c = prompt("What line ends at Greenbelt and at Franconia-Springfield?\nOmit 'line' from your answer, and leave it capitalized.");
+                             if(c == "Yellow"){
+                                 document.writeln("<p style='font-size: 48px;'>You got 4/4!!! YOU WON!!!</p>");
+                                 $("body").css("background-color", "chartreuse");
+                                 alert("You WON!!! 4/4!!!");
+                                 window.close();
+                             }
+                             else{
+                                $("body").css("background-color", "red");
+                                alert("You lost! Please close the window!");
+                                window.close();
+                             }
+                         }
+                         else{
+                             $("body").css("background-color", "red");
+                             alert("You lost!!! Please exit the window now.");
+                             window.close();
+                         }
+                      }
+                      else{
+                          $("body").css("background-color", "red");
+                          alert("You LOST!!!\nYou will be exited from the game.");
+                          window.close();
+                      }
+                    }
+            window.setInterval(function() {
+                $('#result').text(collision($('#divone'), $('#divtwo')));
+            }, 200);
+
+
+
+
+window.setInterval(function() {
+    $('#result').text(collision($('#div1'), $('#div2')));
+}, 200);
+
+
+		</script>
+	</head>
+	<body style="background-color: black;">
+        <div style="background-color: blue; width: 50px; height: 50px;" id="divone"></div>
+        <p style="font-size: 40px; color: white;">Press Escape to exit and close the window.</p>
+        <p style="font-size: 40px; color: white;">Move the blue square with WASD, or arrow keys, to the "R" logo.</p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div style="width: 240px; height: 240px; right: 0px; width: 300px; position: absolute;" id="divtwo">
+            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/NYCS-bull-trans-R.svg/240px-NYCS-bull-trans-R.svg.png"/>
+        </div>
+	</body>
+</html>

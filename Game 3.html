@@ -3,11 +3,6 @@
 	<head>
 		<title>Game 3</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script type="text/javascript">
-			<html>
-	<head>
-		<title>Game 3</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
                 $("#green").mouseenter(function(){
@@ -46,17 +41,16 @@
                             $("#a").fadeOut("slow");
                             $("#b").fadeOut("slow");
                             $("#c").fadeOut("slow");
-                            $("body").append("<p style='font-size: 40px; color: white;'>Great job! You won so far, but wait for the harder stuff!</p>");
+                            $("body").append("<p style='font-size: 40px; color: white;' id='compli'>Great job! You won so far, but wait for the harder stuff!</p>");
                             $("body").append("<p><img src='http://images.nycsubway.org/icon/title_ny_4thave.jpg' id='imgtwo'/></p>")
                             $("#imgtwo").mouseenter(function(){
                                 $("#imgtwo").fadeOut("slow");
-                                $("body").append("<p style='font-size: 40px; color: white;' id='exittwo'>You lost!</p>");
                             })
                             $("#imgtwo").click(function(){
-                                $("body").append("<p style='font-size: 40px; color: white;'>Good job with the mouse skills, though!</p>")
+                                $("body").append("<p style='font-size: 40px; color: white;' id='compliment'>Good job with the mouse skills, though!</p>")
                                 $("#exittwo").remove();
-								$("body").append("<p style='font-size: 40px; color: white;'>Last Question: In 2005, name the model and route of the car with #5555.</p>")
-                                $("body").append("<p style='font-size: 40px; color: white;'>Okay, try <b>THIS</b> on for size!</p>");
+								$("body").append("<p style='font-size: 40px; color: white;' id='questone'>Question: In 2005, name the model and route of the car with #5555.</p>")
+                                $("body").append("<p style='font-size: 40px; color: white;' id='thison'>Okay, try <b>THIS</b> on for size!</p>");
 								$("body").append("<p><input type='submit' style='font-size: 20px;' value='A: R46, L' id='atwo'/></p>");
                                 $("body").append("<p><input type='submit' style='font-size: 20px;' value='B: R44, A.' id='btwo'/></p>");
                                 $("body").append("<p><input type='submit' style='font-size: 20px;' value='C: R40M, E' id='ctwo'/></p>");
@@ -75,6 +69,10 @@
 									$("#ftwo").remove();
 									$("#gtwo").remove();
 									$("#htwo").remove();
+                                    $("#thison").remove();
+                                    $("#compliment").remove();
+                                    $("quesone").remove();
+                                    $("#compli").remove();
 								})
 								$("#btwo").click(function(){
 								    $("#atwo").remove();
@@ -85,6 +83,10 @@
 									$("#ftwo").remove();
 									$("#gtwo").remove();
 									$("#htwo").remove();
+                                    $("#thison").remove();
+                                    $("#compliment").remove();
+                                    $("quesone").remove();
+                                    $("#compli").remove();
 									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
 								})
 								$("#ctwo").click(function(){
@@ -96,6 +98,10 @@
 									$("#ftwo").remove();
 									$("#gtwo").remove();
 									$("#htwo").remove();
+                                    $("#thison").remove();
+                                    $("#compliment").remove();
+                                    $("quesone").remove();
+                                    $("#compli").remove();
 									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
 								})
 								$("#dtwo").click(function(){
@@ -107,7 +113,37 @@
 									$("#ftwo").remove();
 									$("#gtwo").remove();
 									$("#htwo").remove();
-									$("body").append("<p style='font-size: 40px; background-color: chartreuse;'>OMG! YOU WON THE GAME!!!</p>");
+                                    $("body").css("background-color", "black");
+                                    $("#thison").remove();
+                                    $("#compliment").remove();
+                                    $("#questone").remove();
+                                    $("#compli").remove();
+                                    alert("Amazing job!");
+                                    $("body").append("<p><input type='submit' style='font-size: 20px;' value= 'Please click this.' id='clicktwo'/></p>");
+                                    $("#clicktwo").click(function(){
+                                        $("#clicktwo").remove();
+                                        $("body").append("<p><div style='height: 48px; width: 48px; background-color: chartreuse;' id='animchart' ></div></p>");
+                                        /*Set the div position to absolute then you can animate it*/
+                                        $("div").css("position", "absolute");
+                                        $("div").animate({
+                                            left: '250px',
+                                            width: '+=402px',
+                                            height: '+=202px'
+                                        });
+                                        $("#animchart").prepend("<p style='font-size: 40px; color: white;'>Now click this!</p>");
+                                        $("#animchart").append("<p><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/NYCS-bull-trans-T.svg/75px-NYCS-bull-trans-T.svg.png' id='animing'/></p>")
+                                        $("#animing").css("position", "absolute");
+                                        $("#animing").animate({left: '250px'});
+                                        $("#animing").mouseenter(function(){
+                                            $("#animing").fadeOut("slow");
+                                            $("#animchart").append("<p style='font-size: 20px;' id='losetwo'>YOU LOST!!!! SO CLOSE!!!</p>");
+                                        })
+                                        $("#animing").click(function(){
+                                            $("#animing").remove();
+                                            $("#losetwo").remove();
+                                            $("body").append("<p style='font-size: 40px; color: white;' id='losetwo'>YOU WON!!!!</p>")
+                                        })
+                                    })
 								})
 								$("#etwo").click(function(){
 								    $("#atwo").remove();
@@ -118,6 +154,10 @@
 									$("#ftwo").remove();
 									$("#gtwo").remove();
 									$("#htwo").remove();
+                                    $("#thison").remove();
+                                    $("#compliment").remove();
+                                    $("quesone").remove();
+                                    $("#compli").remove();
 									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
 								})
 								$("#ftwo").click(function(){
@@ -129,6 +169,10 @@
 									$("#ftwo").remove();
 									$("#gtwo").remove();
 									$("#htwo").remove();
+                                    $("#thison").remove();
+                                    $("#compliment").remove();
+                                    $("quesone").remove();
+                                    $("#compli").remove();
 									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
 								})
 								$("#gtwo").click(function(){
@@ -140,6 +184,10 @@
 									$("#ftwo").remove();
 									$("#gtwo").remove();
 									$("#htwo").remove();
+                                    $("#thison").remove();
+                                    $("#compliment").remove();
+                                    $("quesone").remove();
+                                    $("#compli").remove();
 									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
 								})
 								$("#htwo").click(function(){
@@ -151,6 +199,10 @@
 									$("#ftwo").remove();
 									$("#gtwo").remove();
 									$("#htwo").remove();
+                                    $("#thison").remove();
+                                    $("#compliment").remove();
+                                    $("quesone").remove();
+                                    $("#compli").remove();
 									$("body").append("<p style='font-size: 40px; color: white;'>You lost! This is not the right answer!</p>");
 								})
                             })
@@ -169,9 +221,6 @@
     <body style="background-color: indigo">
         <p style="font-size: 40px; color: white;">Click the image. ;-)</p>
         <p><img id="green"src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/R62A_1_train_at_Dyckman.jpg/250px-R62A_1_train_at_Dyckman.jpg" /></p>
-		</p><input type="submit" value="Exit and close the window" onclick="exitbeginning()" style='font-size: 20px;' id="exitbeginningtwo" /></p>
+		<p><input type="submit" value="Exit and close the window" onclick="exitbeginning()" style='font-size: 20px;' id="exitbeginningtwo" /></p>
     </body>
-</html>
-		</script>
-	</head>
 </html>

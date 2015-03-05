@@ -35,22 +35,22 @@
 					         });
 							 break;
                          case 65:
-						     $("#divone").stop().animate({
+						     $("#divtwo").stop().animate({
 					             left: '-=250px'
 					         });
 							 break;
                          case 68:
-						     $("#divone").stop().animate({
+						     $("#divtwo").stop().animate({
 					             left: '+=250px'
 					         });
 							 break;
                          case 87:
-						     $("#divone").stop().animate({
+						     $("#divtwo").stop().animate({
 					             top: '-=250px'
 					         });
 							 break;
                          case 83:
-						     $("#divone").stop().animate({
+						     $("#divtwo").stop().animate({
 					             top: '+=250px'
 					         });
 							 break;
@@ -75,44 +75,40 @@
                       var r2 = x2 + w2;
         
                       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
-                      document.write("<p style='font-size: 48px;'>You got 1/4 of the game complete.</p>");
-                      var a = prompt("How many people died in the Malbone Street Wreck?");
-                      if(a == "93"){
-                         $("body").css("background-color", "#33CC33");
-                         document.writeln("<p style='font-size: 48px;'>You got 2/4.</p>");
-                         var b = prompt("What company made the traction motor for the 6024 rolling stock model?\nTHIS IS NOT A NYC CAR NUMBER!!!");
-                         if(b == "Alstom"){
-                             $("body").css("background-color", "#33CC33");
-                             document.writeln("<p style='font-size: 48px;'>You got 3/4.</p>");
-                             var c = prompt("What line ends at Greenbelt and at Franconia-Springfield?\nOmit 'line' from your answer, and leave it capitalized.");
-                             if(c == "Yellow"){
-                                 document.writeln("<p style='font-size: 48px;'>You got 4/4!!! YOU WON!!!</p>");
-                                 $("body").css("background-color", "chartreuse");
-                                 alert("You WON!!! 4/4!!!");
-                                 window.close();
-                             }
-                             else{
-                                $("body").css("background-color", "red");
-                                alert("You lost! Please close the window!");
-                                window.close();
-                             }
-                         }
-                         else{
-                             $("body").css("background-color", "red");
-                             alert("You lost!!! Please exit the window now.");
-                             window.close();
-                         }
-                      }
-                      else{
-                          $("body").css("background-color", "red");
-                          alert("You LOST!!!\nYou will be exited from the game.");
-                          window.close();
-                      }
+					  document.write("<p style='font-size: 48px;'>FIGHT!!!</p>");
+					  document.writeln("<p style='font-size: 48px;'>Which is the car with number #5555?</p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='text' id='player1' /></p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='text' id='player2' /></p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='submit' value='Enter' onclick='contest()' /></p>");
+                      
                     }
             window.setInterval(function() {
                 $('#result').text(collision($('#divone'), $('#divtwo')));
             }, 200);
-
+                     function contest(){
+					      var p1 = document.getElementById('player1').value;
+						  var p2 = document.getElementById('player2').value;
+						  if(p1 == "R46" && p2 != "R46"){
+						      $("body").css("background-color" ,"blue");
+							  alert("Player 1 WINS");
+							  window.close();
+						  }
+						  else if(p1 != "R46" && p2 == "R46"){
+						      $("body").css("background-color" ,"green");
+							  alert("Player 2 WINS");
+							  window.close();
+					      }
+						  else if(p1 != "R46" && p2 != "R46"){
+						      $("body").css("background-color" ,"red");
+							  alert("No player wins!!!");
+							  window.close();
+						  }
+						  else{
+						      $("body").css("background-color" ,"teal");
+							  alert("Player 1 and Player 2 both WIN");
+							  window.close();
+						  }
+					  }
 
 
 
@@ -126,7 +122,7 @@ window.setInterval(function() {
 	<body style="background-color: black;">
         <div style="background-color: blue; width: 50px; height: 50px;" id="divone"></div>
         <p style="font-size: 40px; color: white;">Press Escape to exit and close the window.</p>
-        <p style="font-size: 40px; color: white;">Move the blue square with WASD, or arrow keys, to the "R" logo.</p>
+        <p style="font-size: 40px; color: white;">Move the blue square with arrow keys. This is player 1. Move the green square with WASD, and you are player 2. See what happens if they touch each other.</p>
         <br />
         <br />
         <br />
@@ -134,8 +130,8 @@ window.setInterval(function() {
         <br />
         <br />
         <br />
-        <div style="width: 240px; height: 240px; right: 0px; width: 300px; position: absolute;" id="divtwo">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/NYCS-bull-trans-R.svg/240px-NYCS-bull-trans-R.svg.png"/>
+        <div style="width: 50px; height: 50px; position: absolute; background-color: chartreuse;" id="divtwo">
+            <!-- <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/NYCS-bull-trans-R.svg/240px-NYCS-bull-trans-R.svg.png"/> Uncomment this later-->
         </div>
 	</body>
 </html>

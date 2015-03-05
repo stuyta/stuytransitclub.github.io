@@ -75,12 +75,10 @@
                       var r2 = x2 + w2;
         
                       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
-					  document.write("<p style='font-size: 48px;'>FIGHT!!!</p>");
+                      document.write("<p style='font-size: 120px; background-color: red; text-align: center; color: gold;'><u>FIGHT</u></p>");
 					  document.writeln("<p style='font-size: 48px;'>Which is the car with number #5555?</p>");
-					  document.writeln("<p style='font-size: 48px;'><input type='text' id='player1' /></p>");
-					  document.writeln("<p>Player 1</p>");
-					  document.writeln("<p style='font-size: 48px;'><input type='text' id='player2' /></p>");
-					  document.writeln("<p>Player 2</p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='password' id='player1' /> Player 1</p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='password' id='player2' /> Player 2</p>");
 					  document.writeln("<p style='font-size: 48px;'><input type='submit' value='Enter' onclick='contest()' /></p>");
                       
                     }

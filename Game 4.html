@@ -76,39 +76,79 @@
         
                       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
                       document.write("<p style='font-size: 120px; background-color: red; text-align: center; color: gold;'><u>FIGHT</u></p>");
-					  document.writeln("<p style='font-size: 48px;'>Which is the car with number #5555?</p>");
+					  document.writeln("<p style='font-size: 48px;'>Read the question below.</p>");
 					  document.writeln("<p style='font-size: 48px;'><input type='password' id='player1' /> Player 1</p>");
 					  document.writeln("<p style='font-size: 48px;'><input type='password' id='player2' /> Player 2</p>");
-					  document.writeln("<p style='font-size: 48px;'><input type='submit' value='Enter' onclick='contest()' /></p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='submit' value='Submit Answers/Load Questions' onclick='contest()' /></p>");
+					  document.writeln("<p style='font-size: 48px;'><input type='submit' value='Close the Window' onclick='closewin()' /></p>");
                       
                     }
             window.setInterval(function() {
                 $('#result').text(collision($('#divone'), $('#divtwo')));
             }, 200);
+			         function closewin(){
+					     window.close();
+					 }
                      function contest(){
-					      var p1 = document.getElementById('player1').value;
-						  var p2 = document.getElementById('player2').value;
-						  if(p1 == "R46" && p2 != "R46"){
-						      $("body").css("background-color" ,"blue");
-							  alert("Player 1 WINS");
-							  window.close();
+					      /*var choose = ["game1", "game2",]
+						  var rand = choose[Math.floor(Math.random() * choose.length)];
+						  console.log(rand);*/
+						  var p1 = document.getElementById('player1').value;
+			    		  var p2 = document.getElementById('player2').value;
+						  /*if(rand == "game1"){						  
+		    				  alert("You are playing: " + rand)*/
+							  if(p1.length == 0 && p2.length == 0){
+							      $("body").append("<p style='font-size: 48px; color: white;'><u><b>Which IND/BMT model car has the number #5555?</b></u></p>");
+							  }
+				    		  if(p1 == "R46" && p2 != "R46"){
+					    	      $("body").css("background-color" ,"blue");
+						    	  alert("Player 1 WINS");
+							      window.close();
+					    	  }
+						      else if(p1 != "R46" && p2 == "R46"){
+						          $("body").css("background-color" ,"chartreuse");
+	    						  alert("Player 2 WINS");
+		    					  window.close();
+			    		      }
+				    		  else if(p1 != "R46" && p2 != "R46"){
+					    	      $("body").css("background-color" ,"red");
+						    	  alert("Put the right answer in the designated boxes.");
+					    	  }
+						      else{
+						          $("body").css("background-color" ,"teal");
+							      alert("Player 1 and Player 2 both WIN");
+							      window.close();
+						      }
 						  }
-						  else if(p1 != "R46" && p2 == "R46"){
-						      $("body").css("background-color" ,"green");
-							  alert("Player 2 WINS");
-							  window.close();
-					      }
-						  else if(p1 != "R46" && p2 != "R46"){
-						      $("body").css("background-color" ,"red");
-							  alert("No player wins!!!");
-							  window.close();
+						  /*else if( rand == "game2"){
+						      alert("You are playing: " + rand)
+							  if(p1.length == 0 && p2.length == 0){
+							      $("body").append("<p style='font-size: 48px; color: white;'><u><b>What line did the EE run on?</b></u></p>");
+							  }
+							  if(p1 == "Broadway" && p2 != "Broadway"){
+					    	      $("body").css("background-color" ,"blue");
+						    	  alert("Player 1 WINS");
+							      window.close();
+					    	  }
+						      else if(p1 != "Broadway" && p2 == "Broadway"){
+						          $("body").css("background-color" ,"chartreuse");
+	    						  alert("Player 2 WINS");
+		    					  window.close();
+			    		      }
+				    		  else if(p1 != "Broadway" && p2 != "Broadway"){
+					    	      $("body").css("background-color" ,"red");
+						    	  alert("Put the right answer in the designated boxes.");
+					    	  }
+						      else{
+						          $("body").css("background-color" ,"teal");
+							      alert("Player 1 and Player 2 both WIN");
+							      window.close();
+						      }
 						  }
 						  else{
-						      $("body").css("background-color" ,"teal");
-							  alert("Player 1 and Player 2 both WIN");
-							  window.close();
+						      alert("This game has not been available yet!!!");
 						  }
-					  }
+					  }*/
 
 
 

@@ -86,7 +86,11 @@ div div div{
 			}
 			#documentaries{
 			   display: inline;
-				padding-left: 20px;
+			   padding-left: 20px;
+			}
+			#privacy{
+			   display: inline;
+			   padding-left: 20px;
 			}
 			#excel{
 			    width: 20em;

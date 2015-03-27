@@ -89,10 +89,10 @@ function game(){
 	}
 	/*Put an else if or else statement*/
 	else if(choose == "C"){
-		window.open("Game 3.html")
+		window.open("http://stuytransitclub.github.io/games/Game 3.html")
 	}
 	else if(choose == "D"){
-		window.open("Game 4.html")
+		window.open("http://stuytransitclub.github.io/games/Game 4.html")
 	}
 	else{
 		alert("Put your choice in capital letters. Try again.")

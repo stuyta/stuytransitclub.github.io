@@ -92,6 +92,10 @@ div div div{
 			   display: inline;
 			   padding-left: 20px;
 			}
+			#audio{
+			   display: inline;
+			   padding-left: 20px;
+			}
 			#excel{
 			    width: 20em;
 				height: 3em;
@@ -113,4 +117,21 @@ div div div{
 			}
 			#game:active{
 			   background-color: #000000;
+			}
+			#table{
+			   border-width: 5px;
+			   border-style: solid;
+			   border-color: black;
+			   text-align: center;
+			   margin-left: auto;
+			   margin-right: auto;
+			   width: 70%;
+			}
+			td{
+			   border-style: dashed;
+			   border-color: black;
+			}
+			tr{
+			   border-style: dashed;
+			   border-color: purple;
 			}

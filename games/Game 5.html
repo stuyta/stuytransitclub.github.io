@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Game 5</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+		    $(document).ready(function(){
+			    var body = $("body");
+				var a = prompt("How much do the miniature magnets at the NYC Transit Museum cost?\nLeave your answer without the dollar signs and as an integer.");
+				if(a == "3"){
+				    body.append("<h2>1/10 COMPLETE</h2>");
+					var b = prompt("What method of mining did the early workers use to construct the Joralemon Street Tunnels?\nA: Tunnel Boring Machine\nB: Cut and Cover\nC: Mining with Cut and Cover")
+					if(b == "B" || b == "b"){
+					    body.append("<h2>2/10 COMPLETE</h2>");
+						body.append("<div style='height: 50px; width: 50px; background-color: #AAAAAA;' id='div1'></div>")
+						$("#div1").mouseenter(function(){
+						    $("#div1").fadeOut("fast");
+							body.css("background-color", "red");
+					    	body.css("color", "white")
+    						body.append("<h1 style='color: white; text-align: center;' id='h1del'>YOU LOST!!!!!</h1>");
+	    					body.append("<input type = 'submit' value='Close this Window' id='close'/>");
+						})
+						$("#div1").click(function(){
+						    $("#close").remove();
+							$("#h1del").remove();
+							body.css("color", "black");
+							body.css("background-color", "#00FF00");
+							$("#div1").remove();
+							body.append("<h2>3/10 COMPLETE</h2>");
+							var c = prompt("What is the future western terminus of the Silver Line of the WMATA?");
+							if(c == "Route 772"|| c =="route 772"|| c == "Route772" || c == "route772"){
+							    body.append("<h2>4/10 COMPLETE</h2>");
+								body.append("<h2 id='ques4'>Which station on the Orange Line on the WMATA has three tracks?</h2>")
+								body.append("<input type = 'submit' value='Ronald Reagan Washington National Airport' id='reagan'/><input type = 'submit' value='Greensboro' id='greensboro'/><input type = 'submit' value='West Falls Church' id='westfalls'/>");
+								$("#westfalls").click(function(){
+								    body.append("<h2>5/10 COMPLETE</h2>");
+									$("#reagan").remove();
+									$("#greensboro").remove();
+									$("#westfalls").remove();
+									$("#ques4").remove();
+									body.append("<h2 id='ques5'>What was the northern terminus of the B train in 1990?</h2>");
+									body.append("<input type = 'submit' value='21st Street-Queensbridge' id='queens'/><input type = 'submit' value='Bedford Park Blvd' id='bedford'/><input type = 'submit' value='145th Street' id='145th'/>");
+									$("#queens").click(function(){
+							    		$("#queens").remove();
+								    	$("#bedford").remove();
+									    $("#145th").remove();
+    									$("#ques5").remove();
+										body.append("<h2>6/10 COMPLETE</h2>");
+										var d = prompt("What was the planned eastern terminus for the Silver Line?");
+										if(d == "Stadium-Armory" || d == "stadium-armory"){
+										    body.append("<h2>7/10 COMPLETE</h2>");
+											body.append("<div style='height: 50px; width: 50px; background-color: #CCCCCC;' id='div2'></div>");
+											$("#div2").css("position", "absolute");
+											$("#div2").mouseenter(function(){
+											    $("#div2").animate({left:"+250px"});
+											})
+											$("#div2").click(function(){
+												$("#div2").remove();
+												body.append("<h2>8/10 COMPLETE</h2>");
+												var e = prompt("What is the name of the bridge that carries the Yellow Line of the WMATA?");
+												if(e == "Fenwick Bridge"|| e == "fenwick bridge"){
+												    body.append("<h2>9/10 COMPLETE</h2>");
+													var f = prompt("In hexadecimal, what is the color of the T rollsign?\nIn your answer, add a '#' before the color specified.");
+													if(f == "#00add0" || f == "#00ADD0"){
+													    body.append("<h2>10/10 COMPLETE</h2>");
+														body.append("<h2>YOU WON!!!!!</h2>");
+														body.css("background-color", "#00ADD0")
+														body.append("<input type = 'submit' value='Go to Level 2!!' id='level2'/>");
+														body.append("<input type = 'submit' value='Click this!' id='click'/>");
+														$("#click").click(function(){
+														    body.append("<h2 id='gotolevel2'style='color: red;'>GO TO LEVEL 2!</h2>");
+														})
+														$("#level2").click(function(){
+															document.write("<h1 style='color: chartreuse;'><b>LEVEL 2!</b></h1>");
+															document.writeln("<iframe width='500px' height='500px' src='Game 5 Level 2.html'></iframe>");
+															body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+														})
+													}
+													else{
+													    body.css("background-color", "red");
+						    	   	     		        body.css("color", "white")
+    								    	    	    body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+			       			 					        body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+													}
+												}
+												else{
+												    body.css("background-color", "red");
+						    	   	     		    body.css("color", "white")
+    								    	    	body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+			       			 					    body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+												}
+										    })
+										}
+											
+										else{
+										    body.css("background-color", "red");
+						    	    		body.css("color", "white")
+    								    	body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+			       			 				body.append("<input type = 'submit' value='Close this Window'  class='close'/>");
+										}
+    								})
+	    							$("#bedford").click(function(){
+		    						    body.css("background-color", "red");
+			    		        		body.css("color", "white")
+										$("#queens").remove();
+								    	$("#bedford").remove();
+									    $("#145th").remove();
+    			    		    		body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+	   			 	    		    	body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+						    		})
+							    	$("#ques5").click(function(){
+								        body.css("background-color", "red");
+					        		    body.css("color", "white")
+										$("#queens").remove();
+								    	$("#bedford").remove();
+									    $("#145th").remove();
+    					    	    	body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+	   			 			    	    body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+								    })
+							    })
+								$("#reagan").click(function(){
+								    body.css("background-color", "red");
+					        		body.css("color", "white")
+									$("#reagan").remove();
+									$("#greensboro").remove();
+									$("#westfalls").remove();
+    					    		body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+	   			 			    	body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+								})
+								$("#greensboro").click(function(){
+								    body.css("background-color", "red");
+					        		body.css("color", "white")
+									$("#reagan").remove();
+									$("#greensboro").remove();
+									$("#westfalls").remove();
+    						    	body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+	   			 				    body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+								})
+							}
+							else{
+							    body.css("background-color", "red");
+					    		body.css("color", "white")
+    							body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+	   			 				body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+							}
+						})
+					}
+					else{
+					    body.css("background-color", "red");
+					    body.css("color", "white")
+    					body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+	    				body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+					}
+				}
+				else{
+				    body.css("background-color", "red");
+					body.css("color", "white")
+					body.append("<h1 style='color: white; text-align: center;'>YOU LOST!!!!!</h1>");
+					body.append("<input type = 'submit' value='Close this Window' class='close'/>");
+				}
+				$(".close").click(function(){
+				    window.close();
+				})
+			})
+		</script>
+	</head>
+	<body style="background-color: #00FF00;">
+	    <h1 style="font-size: 64px;" id="TEXT1">GAME 5</h1>
+	</body>
+</html>

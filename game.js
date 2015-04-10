@@ -1,6 +1,6 @@
 function game(){
 	var choose = prompt("Which game would you like to play?\nA: Transit Trivia Game 1\nB: Transit Trivia Game 2\nC: Play other games")
-	if(choose ==  "A"){
+	if(choose ==  "A"|| choose == "a"){
 		//Make a transit trivia game.
 		var name = prompt("What is your name?")
 		alert("WELCOME\nTo the 1st Edition of\nThe Transit Trivia Game!");
@@ -42,7 +42,7 @@ function game(){
 		}
 	}
 	/*Replace it with an else if statement*/
-	else if(choose == "B"){
+	else if(choose == "B"|| choose == "b"){
 		var name = prompt("What is your name?")
 		alert("WELCOME " + name + ",\nTo the second edition of\nThe Transit Trivia Game!\n\nThe questions themselves can be significantly harder than the first game, so watch your back!")
 		var pa = prompt("What country assembles the R160 parts and ships them to the United States?\nHint: The factories in this country are owned by Alstom.")
@@ -88,10 +88,10 @@ function game(){
 		}
 	}
 	/*Put an else if or else statement*/
-	else if(choose == "C"){
+	else if(choose == "C"|| choose == "c"){
 		window.open("http://stuytransitclub.github.io/games/")
 	}
 	else{
-		alert("Put your choice in capital letters. Try again.")
+		alert("Your choice is either A, B, or C.")
 	}
 }

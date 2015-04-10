@@ -1,5 +1,5 @@
 function game(){
-	var choose = prompt("Which game would you like to play?\nA: Transit Trivia Game 1\nB: Transit Trivia Game 2\nC: Play other games")
+	var choose = prompt("Which game would you like to play?\nA: Transit Trivia Game 1\nB: Transit Trivia Game 2\nC: Game 3\nD: Game 4\nE: Game 5")
 	if(choose ==  "A"){
 		//Make a transit trivia game.
 		var name = prompt("What is your name?")
@@ -89,7 +89,14 @@ function game(){
 	}
 	/*Put an else if or else statement*/
 	else if(choose == "C"){
-		window.open("http://stuytransitclub.github.io/games/")
+		window.open("http://stuytransitclub.github.io/games/Game 3.html")
+	}
+	else if(choose == "D"){
+		window.open("http://stuytransitclub.github.io/games/Game 4.html")
+	}
+	else if(choose == "E"){
+		window.open("http://stuytransitclub.github.io/games/Game 5.html")
+		alert("Game 3 and Game 4 should be played first, as Game 5 can combine these properties.")
 	}
 	else{
 		alert("Put your choice in capital letters. Try again.")

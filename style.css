@@ -1,3 +1,11 @@
+@font-face{
+    font-family: Century Gothic;
+	src: url("GOTHIC.ttf");
+}
+body{
+    font-family: Century Gothic, sans-serif;
+	text-align: center;
+}
 h1{
     text-align: center;
     font-size: 48px;
@@ -6,7 +14,6 @@ h1{
 #notext{
     text-decoration: none;
 	font-size: 48px;
-	font-family: Times;
 	color: black;
 	background-color: transparent;
 	border: none;
@@ -24,23 +31,35 @@ h1{
 div{
     background-color:chartreuse;
 	font-size: 25px;
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 80%; 
 }
 div h2{
     font-size: 36;
     background-color: yellow;
 }
+nav{
+    text-decoration: none;
+	font-size: 36px;
+    color: black;
+	text-align: center;
+}
+ul, ol{
+    text-align: left;
+}
 a{
-    font-size: 36px;
-    color: #0007f4;
-	border-top: 1px solid #CCCCCC;
-    border-right: 1px solid #333333;
-    border-bottom: 1px solid #333333;
-    border-left: 1px solid #CCCCCC;
-	text-decoration: none;
-    background-color: #EEEEEE;
+ color: black;
 }
 a:hover{
-   color: #FFFF00;
+   color: yellow;
+}
+nav input{
+    text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 }
 div div{
     background-color: #1cc8ff;
@@ -50,52 +69,14 @@ div div p{
     font-weight: bold;
 }
 h2{
-    background-color: white;
+    text-decoration: underline;
+	color: black;
 }
 div div div{
     background-color: orange;
 	height: 430px;
 	overflow-y: scroll;
 }
-/* THIS IS ACROSS ALL WEBSITES/*/
-		    ul:first-child{
-			        list-style-type: none;
-                    margin: 0;
-                    padding: 0;
-                    overflow: hidden;
-			}
-			#home{
-			     display: inline;
-				 padding-left: 0px;
-			}
-			#about{
-			     display: inline;
-				 padding-left: 20px;
-			}
-			#gallery{
-			     display: inline;
-				 padding-left: 20px;
-			}
-			#thanks{
-			     display: inline;
-				 padding-left: 20px;
-			}
-			#youtube{
-			    display: inline;
-				padding-left: 20px;
-			}
-			#documentaries{
-			   display: inline;
-			   padding-left: 20px;
-			}
-			#privacy{
-			   display: inline;
-			   padding-left: 20px;
-			}
-			#audio{
-			   display: inline;
-			   padding-left: 20px;
-			}
 			#facts{
 				width: 20em;
 				height: 3em;

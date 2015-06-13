@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Gallery</title>
+		<link type="text.css" rel="stylesheet" href="style.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+		    /*COPY THIS TEXT ACROSS ALL HTML PAGES*/
+		    $(document).ready(function(){
+		        setInterval(function(){
+				    $("#carousel ul").animate({marginLeft:'-320px'}, 2000, function(){
+					    $(this).find("li:last").after($(this).find("li:first"));
+						$(this).css({marginLeft: 0});
+					})
+				},4000);
+		    });
+		</script>
+		<style>
+		    *{
+			    padding: 0;
+				margin: 0;
+			}
+			body{
+			    
+			}
+			#main{
+			    margin: 5% auto;
+			}
+			#carousel{
+			    width: 320px;
+				height: 240px;
+				overflow: hidden;
+			}
+			#carousel ul{
+			    list-style: none;
+				width: 5760px;
+				/*Change this to the number of images times the pixels the images have. If necessary, resize the images.*/
+				height: 240px;
+			}
+			#carousel ul li{
+			    float: left;
+				width: 320px;
+				height: 240px;
+			}
+			#carousel ul li iframe{
+			    width: 320px;
+				height: 240px;
+			}
+		</style>
+	</head>
+	<body>
+	    <div id="main">
+		    <h2>New York City Transit Museum-2014</h2>
+		    <div id="carousel" style="background-color: chartreuse;">
+			    <ul>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133723&authkey=AMXC0D-TILuvmaA" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133720&authkey=AC5IYZ3S_ov29eg" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133721&authkey=ABq5bBNEpoBPWME" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133722&authkey=AJwV6d4voK_9xtY" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133724&authkey=AIcCpZKBbqkCWUU" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133726&authkey=AF3vy55NT_YwZIQ" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133727&authkey=AG8kLvF8CLU_6oc" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133729&authkey=ACzoGSCfuWaRKG0" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133740&authkey=AC9PGp4ivJVdKbE" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133730&authkey=AKSCFD76LkGI2BU" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133731&authkey=ABW1LL4vobSbjBM" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133732&authkey=AJbLlHstZ-qCAxc" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133733&authkey=APSipumMVqXx1ak" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133734&authkey=AKs7cRJPxFyWZnw" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133736&authkey=AOqXbFP3ZVn9oy8" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133737&authkey=AN7cddZ5vvWaaBQ" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133738&authkey=ALl9ZFzKFwTmfI4" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				    <li><iframe src="https://onedrive.live.com/embed?cid=A4F8F2588AFBD542&resid=a4f8f2588afbd542%2133739&authkey=AGwwyV5wUdhHMt8" width="320" height="240" frameborder="0" scrolling="no"></iframe></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
